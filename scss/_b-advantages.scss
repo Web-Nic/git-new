@@ -12,6 +12,7 @@
 .b-advantages {
   max-width: calc(50% - 3em);
   margin-bottom: 5em;
+  flex-basis: calc(50% - 3em);
 
   &__inner {
     display: flex;
@@ -19,7 +20,9 @@
     align-items: center;
   }
   &__ic {
-    width: 10em;
+    width: auto;
+    flex: 0 0 auto;
+    max-width: 100%;
     margin-right: 3em;
     margin-left: 2em;
     .ic {
@@ -60,5 +63,4 @@
       }
     }
   }
-
 }

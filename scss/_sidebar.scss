@@ -1,15 +1,12 @@
 .l-sidebar {
   position: relative;
   width: 34em;
+  min-height: 2em;
   font-size: .9em;
   background-color: #f5f6f7;
-  transition: margin-left .5s ease;
   transition: all .3s;
-  min-height: 2em;
-  position: sticky;
-  align-self: flex-end;
-  bottom: 0;
   &__inner {
+    position: relative;
   }
   &__main {
     padding: 2.2222222222em 2.2222222222em 2.4444444444em;
@@ -40,8 +37,19 @@
     &.active {
       left: 0;
       margin-left: 0;
-      -webkit-box-shadow: 0 0 5em 0 rgba(0, 0, 0, .175);
-              box-shadow: 0 0 5em 0 rgba(0, 0, 0, .175);
+      box-shadow: 0 0 5em 0 rgba(0, 0, 0, .175);
+    }
+  }
+}
+
+@supports (position: sticky) {
+  .l-sidebar {
+    position: sticky;
+    align-self: flex-end;
+    bottom: 0;
+
+    @include screen-tablet {
+      position: fixed;
     }
   }
 }
