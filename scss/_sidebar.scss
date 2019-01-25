@@ -1,0 +1,47 @@
+.l-sidebar {
+  position: relative;
+  width: 34em;
+  font-size: .9em;
+  background-color: #f5f6f7;
+  transition: margin-left .5s ease;
+  transition: all .3s;
+  min-height: 2em;
+  position: sticky;
+  align-self: flex-end;
+  bottom: 0;
+  &__inner {
+  }
+  &__main {
+    padding: 2.2222222222em 2.2222222222em 2.4444444444em;
+  }
+  &.active {
+    margin-left: -34em;
+  }
+
+
+  @include screen-desktop-down {
+    width: 27em;
+    &.active {
+      margin-left: -27em;
+    }
+  }
+
+  @include screen-tablet {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    bottom: 0;
+    left: -27em;
+    &__inner {
+      overflow: overlay;
+      height: 100%;
+    }
+
+    &.active {
+      left: 0;
+      margin-left: 0;
+      -webkit-box-shadow: 0 0 5em 0 rgba(0, 0, 0, .175);
+              box-shadow: 0 0 5em 0 rgba(0, 0, 0, .175);
+    }
+  }
+}

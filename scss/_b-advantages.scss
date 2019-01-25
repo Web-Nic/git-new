@@ -1,0 +1,64 @@
+.b-advantages-group {
+  display: flex;
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+
+  @include screen-mobile-lg {
+    display: block;
+  }
+}
+
+.b-advantages {
+  max-width: calc(50% - 3em);
+  margin-bottom: 5em;
+
+  &__inner {
+    display: flex;
+
+    align-items: center;
+  }
+  &__ic {
+    width: 10em;
+    margin-right: 3em;
+    margin-left: 2em;
+    .ic {
+      width: 2em;
+      height: 2em;
+      font-size: 2.75rem;
+      line-height: 2;
+      color: $color-primary;
+      border: solid 2px rgba(210, 215, 217, .75);
+      border-radius: .25rem;
+      transform: rotate(45deg);
+      text-align: center;
+      &:before {
+        display: block;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  &__info {
+    margin-bottom: 0;
+  }
+
+  @include screen-mobile-lg {
+    max-width: 100%;
+  }
+
+  @include screen-mobile-xs {
+    &__inner {
+      display: block;
+    }
+    &__ic {
+      height: 6em;
+      line-height: 6em;
+      margin: 0 0 1.5em 0;
+      width: 6em;
+      .ic {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+}

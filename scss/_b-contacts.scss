@@ -1,0 +1,19 @@
+.b-contacts {
+  &__item {
+    display: flex;
+    margin-top: 1.5em;
+    padding-top: 1.5em;
+    border-top: solid 1px rgba(210, 215, 217, .75);
+    .ic {
+      width: auto;
+      padding-right: 1em;
+      font-size: 1.5em;
+      color: $color-primary;
+    }
+  }
+  &__link {
+    color: $color-gray;
+    border-bottom: dotted 1px;
+    text-decoration: none;
+  }
+}

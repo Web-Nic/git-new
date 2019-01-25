@@ -1,0 +1,47 @@
+.b-form-search {
+  position: relative;
+  padding: 1.6666666667em;
+  background-color: #eff1f2;
+  &__input {
+    display: block;
+    width: 100%;
+    height: 2.75em;
+    padding: 0 1em;
+    font-size: 11pt;
+    border: solid 1px rgba(210, 215, 217, .75);
+    border-radius: .375em;
+    outline: none;
+    background: #fff;
+    transition: all .3s;
+
+    appearance: none;
+    &:hover,
+    &:focus {
+      border-color: $color-primary;
+      box-shadow: 0 0 0 1px $color-primary;
+    }
+  }
+  &__btn {
+    position: absolute;
+    top: 1.2em;
+    right: 1.2em;
+    bottom: 0;
+    display: block;
+    width: 2em;
+    height: 2em;
+    font-size: 1.5em;
+    line-height: 2em;
+    opacity: .325;
+    color: $color-gray;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .3s;
+    transform: scaleX(-1);
+    text-align: center;
+    &:hover {
+      opacity: 1;
+      color: $color-primary;
+    }
+  }
+}

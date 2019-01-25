@@ -1,0 +1,63 @@
+.section-post {
+  overflow: hidden;
+}
+
+.b-post-group {
+  display: grid;
+  margin-right: -3em;
+  margin-bottom: 2em;
+  margin-left: -3em;
+
+  grid-template-columns: 1fr 1fr 1fr;
+
+  @include screen-desktop-down {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include screen-mobile-xs {
+    grid-template-columns: 1fr;
+  }
+}
+
+.b-post {
+  padding-right: 3em;
+  padding-left: 3em;
+  &__media {
+    overflow: hidden;
+    margin-bottom: 2em;
+  }
+
+  @include screen-desktop-up {
+    &:not(:nth-child(3n)) {
+      border-right: 1px solid rgba(210, 215, 217, .75);
+    }
+    &:not(:nth-child(-n+3)) {
+      padding-top: 3em;
+    }
+    &:not(:nth-last-child(-n+3)) {
+      padding-bottom: 3em;
+      border-bottom: 1px solid rgba(210, 215, 217, .75);
+    }
+  }
+
+  @include screen-desktop-between-lg {
+    &:not(:nth-child(2n)) {
+      border-right: 1px solid rgba(210, 215, 217, .75);
+    }
+    &:not(:nth-child(-n+2)) {
+      padding-top: 3em;
+    }
+    &:not(:nth-last-child(-n+2)) {
+      padding-bottom: 3em;
+      border-bottom: 1px solid rgba(210, 215, 217, .75);
+    }
+  }
+
+  @include screen-mobile-xs {
+    &:not(:last-child) {
+      padding-bottom: 3em;
+      margin-bottom: 3em;
+      border-bottom: 1px solid rgba(210, 215, 217, .75);
+    }
+  }
+}

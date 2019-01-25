@@ -1,0 +1,45 @@
+//--------------------------------------------------
+// [Responsive]
+//--------------------------------------------------
+
+
+@mixin screen-desktop-up {
+  @media (min-width: 1681px) {
+    @content;
+  }
+}
+
+@mixin screen-desktop-down {
+  @media (max-width: 1680px) {
+    @content;
+  }
+}
+
+@mixin screen-tablet {
+  @media (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin screen-mobile-lg {
+  @media (max-width: 980px) {
+    @content;
+  }
+}
+@mixin screen-mobile {
+  @media (max-width: 736px) {
+    @content;
+  }
+}
+
+@mixin screen-desktop-between-lg {
+  @media (max-width: 1680px) and (min-width: 481px) {
+    @content;
+  }
+}
+
+@mixin screen-mobile-xs {
+  @media (max-width: 480px) {
+    @content;
+  }
+}

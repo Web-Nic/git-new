@@ -1,0 +1,70 @@
+/* ======= GLOBAL ======= */
+body {
+  margin: 0;
+  font: 13.3333px/1.5em $font-main;
+  color: $color-gray;
+}
+* {
+    box-sizing: border-box;
+}
+a {
+  transition: all .2s ease-in-out;
+  &:hover {
+    color: $color-primary;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 1em;
+  font-family: $font-second;
+  font-weight: 700;
+  line-height: 1.5;
+  color: $color-dark;
+}
+
+.l-theme {
+  display: flex;
+
+  justify-content: space-between;
+}
+.l-main {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 6em .1em;
+
+  flex-basis: 0;
+  flex-grow: 1;
+
+  @include screen-tablet {
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+}
+
+.section-default {
+  padding: 6em 0 4em;
+  &:not(:first-child) {
+    border-top: solid 2px rgba(210, 215, 217, .75);
+  }
+}
+.section-sidebar {
+  margin-bottom: 3.5em ;
+  padding-bottom: 3.5em ;
+  border-bottom: solid 2px rgba(210, 215, 217, .75);
+}
+
+.sr-only {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+}

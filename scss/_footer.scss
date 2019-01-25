@@ -1,0 +1,9 @@
+.footer {
+  font-size: .9em;
+  color: #9fa3a6;
+  &__link {
+    color: #9fa3a6;
+    border-bottom: dotted 1px;
+    text-decoration: none;
+  }
+}
